@@ -1,0 +1,41 @@
+<!-- Title of the page -->
+<h1>{{ title }}</h1>
+
+<!-- Input for First Name -->
+<label for="firstname">First name:</label>
+<input type="text" #firstname id="firstname" name="firstname"/>
+
+<!-- Input for Last Name -->
+<label for="lastname">Last name:</label>
+<input type="text" #lastname id="lastname" name="lastname" />
+
+<!-- Input for Social Skills -->
+<label for="social">Social skills:</label>
+<input type="text" #social id="social" name="social" />
+
+<!-- Input for Social Media -->
+<label for="media">Social media:</label>
+<input type="text" #media id="media" name="media" />
+
+<!-- Input for Social Media Address -->
+<label for="address">Social media address:</label>
+<input type="text" #address id="address" name="address" />
+
+<!-- Display the number of vowels in the full name -->
+<p>The number of vowels: {{ vowelCount }}</p>
+
+<!-- Display the number of consonants in the full name -->
+<p>The number of consonants: {{ consonantCount }}</p>
+
+<!-- Display the entered full name -->
+<p>The entered full name: {{ firstName + " " + lastName }}</p>
+
+<!-- Display the reversed version of the full name -->
+<p>The reversed version of the full name: {{ reversedLastName + " " + reversedFirstName }}</p>
+
+<!-- Display the extracted social skills -->
+<p>Social skills: {{ socialSkills }}</p>
+<p>Social media: {{ socialMedia }}</p>
+
+<!-- Button to trigger the getValue function -->
+<button (click)="getValue(firstname.value, lastname.value, social.value, media.value, address.value)">Submit</button>
